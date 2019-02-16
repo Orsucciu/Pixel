@@ -8,6 +8,8 @@ TagManager:
   - Fire
   - Missaghji
   - canvasMissaghji
+  - input
+  - answer
   layers:
   - Default
   - TransparentFX
