@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FormGame.unity
     guid: 23e50671dc2d67243a9b2070d8d842f9
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+    guid: 7b64eac7ded5289469b6dc968b33c9e6
   m_configObjects: {}
