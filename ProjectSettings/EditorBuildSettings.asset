@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MobileDepthWater/Scenes/DemoScene.unity
     guid: 56af498a20d7fb14ab9dd5bbde060f9d
+  - enabled: 1
+    path: Assets/Scenes/FormGame.unity
+    guid: 23e50671dc2d67243a9b2070d8d842f9
   m_configObjects: {}
