@@ -9,6 +9,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class formGameHandler : MonoBehaviour
 {
@@ -44,6 +46,19 @@ public class formGameHandler : MonoBehaviour
     public GameObject answerTextParent5;
 
     public GameObject response;
+    public GameObject response1;
+    public GameObject response2;
+    public GameObject response3;
+
+    public GameObject couple1;
+    public GameObject couple2;
+    public GameObject couple3;
+
+    public GameObject reaction;
+    public GameObject reactionParent;
+    public Button reactionButton;
+
+     public float targetTime = 60.0f;
 
     public List<fiure> fiuri = new List<fiure>();
     public List<Sprite> sprites = new List<Sprite>();
@@ -66,10 +81,28 @@ public class formGameHandler : MonoBehaviour
         go_Button5.onClick.AddListener(TaskGoButton5);
         answerTextParent5.SetActive(false);
 
+        reactionButton.onClick.AddListener(TaskReaction);
+
         fiure pic = new fiure();
         pic.image = sprites[0];
 
         fiuri.Add(pic);
+    }
+
+    void Update(){
+
+      targetTime -= Time.deltaTime;
+
+      if (targetTime <= 0.0f)
+      {
+         timerEnded();
+      }
+
+    }
+
+    void timerEnded()
+    {
+       Debug.Log("game over");
     }
 
     void TaskGoButton()
@@ -80,6 +113,8 @@ public class formGameHandler : MonoBehaviour
         inputGroup.SetActive(false);
         answerTextParent.SetActive(true);
         response.SetActive(true);
+        answerTextParent2.SetActive(true);
+        couple1.SetActive(true);
     }
 
     void TaskGoButton2(){
@@ -87,6 +122,9 @@ public class formGameHandler : MonoBehaviour
       answerText2.text = inputField2.text;
       inputGroup2.SetActive(false);
       answerTextParent2.SetActive(true);
+      response1.SetActive(true);
+      answerTextParent3.SetActive(true);
+      couple2.SetActive(true);
     }
 
     void TaskGoButton3(){
@@ -94,6 +132,10 @@ public class formGameHandler : MonoBehaviour
       answerText3.text = inputField3.text;
       inputGroup3.SetActive(false);
       answerTextParent3.SetActive(true);
+      response2.SetActive(true);
+      answerTextParent4.SetActive(true);
+      reactionParent.SetActive(true);
+      //couple3.SetActive(true);
     }
 
     void TaskGoButton4(){
@@ -109,5 +151,17 @@ public class formGameHandler : MonoBehaviour
       inputGroup5.SetActive(false);
       answerTextParent5.SetActive(true);
     }
+
+    void TaskReaction(){
+      reaction.SetActive(true);
+      reactionParent.SetActive(false);
+      StartCoroutine(Example());
+   }
+
+   private IEnumerator Example()
+   {
+       yield return new WaitForSeconds(1);
+       SceneManager.LoadScene(3);
+   }
 
 }

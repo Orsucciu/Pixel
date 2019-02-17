@@ -1,14 +1,44 @@
 {"fiure":[
   {
-    "id": 0, 
-    "fileName": "image.jpg",
-    "locu": "",
-    "tematiche": ["sportu", "musica", "..." ]
+    "id": 1,
+    "fileName": " Vechja uriginale.png ",
+    "locu": " Amerique du sud " ,
+    "tematiche": [" ghjente ", " moda ", " vechji " " fuma " ]
   },
   {
-    "id": 1,
+    "id": 2,
     "fileName": "pecure.png",
-    "locu": "",
-    "tematiche": ["sportu", "musica", "..." ]
+    "locu": "Europe",
+    "tematiche": [" Banda ", " animali ", " Sfarenza " " différence " ]
   }
-]}
+ {
+    "id": 3,
+    "fileName": " Cartoon.png",
+    "locu": " Amerique ",
+    "tematiche": [" Coppiu ", " Amore", " Inseme " " falzi" ]
+  },
+{
+    "id": 4,
+    "fileName": " Acula.png",
+    "locu": " Africa ",
+    "tematiche": [" Saltu ", " caccia ", " Inseme " " falzi" ]
+  },
+{
+    "id": 5,
+    "fileName": " Orsu.png",
+    "locu": " Antarctique ",
+    "tematiche": [" Orsu biancu ", " sparisce ", " eculugia " ]
+  },
+{
+    "id": 6,
+    "fileName": "Pesciu rossu.png",
+    "locu": " Asie ",
+    "tematiche": [" Pesci ", " japon ", " puesia " ]
+  },
+{
+    "id": 7,
+    "fileName": "Pappaiallu.png",
+    "locu": " Océanie ",
+    "tematiche": [" Peroquet ", " oeil ", " Confusion " ]
+  }
+  ]}
