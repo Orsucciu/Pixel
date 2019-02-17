@@ -20,12 +20,7 @@ public class form2Handle : MonoBehaviour
   }
 
   void TaskReaction(){
-    StartCoroutine(Example());
+    SceneManager.LoadScene(3);
   }
 
-  private IEnumerator Example()
-  {
-   yield return new WaitForSeconds(1);
-   SceneManager.LoadScene(3);
-  }
 }
