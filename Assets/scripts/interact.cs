@@ -60,7 +60,7 @@ public class interact : MonoBehaviour {
             if (vista.collider.gameObject.name.Contains("door") || vista.collider.gameObject.name.Contains("monitor"))
             {
                 canvasMissaghji.GetComponent<Canvas>().enabled = true;
-                Missaghji.GetComponent<Text>().text = "Appoghju";
+                Missaghji.GetComponent<Text>().text = "Appoghju <E>";
 						}
         }
     }
