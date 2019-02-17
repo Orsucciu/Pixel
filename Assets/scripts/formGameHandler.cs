@@ -8,6 +8,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class formGameHandler : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class formGameHandler : MonoBehaviour
     public GameObject inputGroup5;
     public GameObject answerTextParent5;
 
+    public GameObject response;
+
+    public List<fiure> fiuri = new List<fiure>();
+    public List<Sprite> sprites = new List<Sprite>();
+
     void Start()
     {
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
@@ -60,46 +66,46 @@ public class formGameHandler : MonoBehaviour
         go_Button5.onClick.AddListener(TaskGoButton5);
         answerTextParent5.SetActive(false);
 
+        fiure pic = new fiure();
+        pic.image = sprites[0];
+
+        fiuri.Add(pic);
     }
 
     void TaskGoButton()
     {
         //Output this to console when Button1 or Button3 is clicked
         Debug.Log("You have clicked the button!");
-        string answer = inputField.text;
-        answerText.text = answer;
+        answerText.text = inputField.text;
         inputGroup.SetActive(false);
         answerTextParent.SetActive(true);
+        response.SetActive(true);
     }
 
     void TaskGoButton2(){
       Debug.Log("You have clicked the button!");
-      string answer2 = inputField2.text;
-      answerText2.text = answer2;
+      answerText2.text = inputField2.text;
       inputGroup2.SetActive(false);
       answerTextParent2.SetActive(true);
     }
 
     void TaskGoButton3(){
       Debug.Log("You have clicked the button!");
-      string answer3 = inputField3.text;
-      answerText3.text = answer3;
+      answerText3.text = inputField3.text;
       inputGroup3.SetActive(false);
       answerTextParent3.SetActive(true);
     }
 
     void TaskGoButton4(){
       Debug.Log("You have clicked the button!");
-      string answer4 = inputField4.text;
-      answerText4.text = answer4;
+      answerText4.text = inputField4.text;
       inputGroup4.SetActive(false);
       answerTextParent4.SetActive(true);
     }
 
     void TaskGoButton5(){
       Debug.Log("You have clicked the button!");
-      string answer5 = inputField5.text;
-      answerText5.text = answer5;
+      answerText5.text = inputField5.text;
       inputGroup5.SetActive(false);
       answerTextParent5.SetActive(true);
     }

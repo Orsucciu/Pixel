@@ -29,7 +29,7 @@ public class interact : MonoBehaviour {
 
 			if (Physics.Raycast (cam.transform.position, cam.transform.forward, out vista, 5)) {
 
-                //Debug.Log(vista.collider.gameObject.name);
+        Debug.Log(vista.collider.gameObject.name);
 
 				if(vista.collider.gameObject.name.Contains("door")){
 					Interactable target = vista.transform.GetComponent<Interactable> ();
@@ -38,22 +38,30 @@ public class interact : MonoBehaviour {
 						target.doSomething ();
 					}
 
+				}
+
+				if(vista.collider.gameObject.name.Contains("monitor")){
+					InteractableMonitor target = vista.transform.GetComponent<InteractableMonitor> ();
+					if (target != null) {
+
+						target.doSomething ();
 					}
+
 				}
 		  }
 	}
+}
 
-    void MostrarMensaje()
-    {
+    void MostrarMensaje(){
         RaycastHit vista;
 
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out vista, 5))
         {
-            if (vista.collider.gameObject.name.Contains("door"))
+            if (vista.collider.gameObject.name.Contains("door") || vista.collider.gameObject.name.Contains("monitor"))
             {
                 canvasMissaghji.GetComponent<Canvas>().enabled = true;
                 Missaghji.GetComponent<Text>().text = "Appoghju";
-			}
+						}
         }
     }
 }
