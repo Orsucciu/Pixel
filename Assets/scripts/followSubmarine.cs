@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 // Makes objects float up & down while gently spinning.
 public class followSubmarine : MonoBehaviour {
@@ -41,6 +42,12 @@ public class followSubmarine : MonoBehaviour {
   private IEnumerator showAf(){
     yield return new WaitForSeconds(2);
     score.text = "And reach Africa!";
-    camera.orthographicSize = 80.0f;
+    camera.orthographicSize = 90.0f;
+    StartCoroutine(backToMenu());
+  }
+
+  private IEnumerator backToMenu(){
+    yield return new WaitForSeconds(3);
+
   }
 }

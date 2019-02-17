@@ -5,12 +5,13 @@ using UnityEngine;
 public class Interactable : MonoBehaviour {
 	private bool stateOpen = false;
 	private bool opening = false;
-
+	AudioSource audioSource;
+	public AudioClip speech;
 	public GameObject door;
 
 	// Use this for initialization
 	void Start () {
-
+			audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -34,6 +35,9 @@ public class Interactable : MonoBehaviour {
 
 	public void doSomething(){
 		Debug.Log ("HI, Im David");
+
+	audioSource.PlayOneShot(speech, 1f);
+
 		if (stateOpen == false) {
 			stateOpen = true;
 			opening = true;

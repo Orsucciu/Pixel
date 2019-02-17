@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class InteractableMonitor : MonoBehaviour {
 
 	public GameObject monitor;
-  public int sceneNum;
+  //public int sceneNum;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +20,6 @@ public class InteractableMonitor : MonoBehaviour {
 
 	public void doSomething(){
 		Debug.Log ("HI, Im David");
-    SceneManager.LoadScene(sceneNum);
+    SceneManager.LoadScene(4);
 	}
 }

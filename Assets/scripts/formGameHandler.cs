@@ -58,7 +58,7 @@ public class formGameHandler : MonoBehaviour
     public GameObject reactionParent;
     public Button reactionButton;
 
-     public float targetTime = 60.0f;
+    public float targetTime = 60.0f;
 
     public List<fiure> fiuri = new List<fiure>();
     public List<Sprite> sprites = new List<Sprite>();
